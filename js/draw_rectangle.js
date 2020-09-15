@@ -41,6 +41,7 @@ canvas.addEventListener("mousemove", function (ev){
         let width = mousePosition.mouseX - starting_point.x;
         let height = mousePosition.mouseY - starting_point.y;
         ctx.clearRect(starting_point.x, starting_point.y, dimensions_in_progress.width, dimensions_in_progress.height);
+        redrawHiddenRectangles(starting_point.x, starting_point.y, dimensions_in_progress.width, dimensions_in_progress.height, list_rectangle.length);
         drawRectangle(starting_point.x, starting_point.y, width, height, color);
         setDimensionsInProgress(width, height);
     }
